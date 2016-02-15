@@ -2,7 +2,9 @@ Wine food finder (ionic)
 =====================
 
 # wine-food-finder
-A quick Ionic Framework and Cordova project featuring utilising the amazing kimono labs web crawler to scrape the data every week from a website and turn it into a set of API's. This app allows the user to quickly find wines, foods, and recipes by a variety of filters (and/or search). It also includes chat with various rooms utilising firebase (real-time cloud based sockets)
+A proof of concept mobile application using the Ionic Framework project. This app was built in a few days utilising the amazing kimono labs web crawler to scrape the data every week from a website and turn it into a set of functional API's. It is then cached using local storage. 
+
+This app allows the user to quickly find wines, foods, and recipes by a variety of filters (and/or search). It also includes chat with various rooms utilising firebase (real-time cloud based sockets)
 
 ## Installation
 
