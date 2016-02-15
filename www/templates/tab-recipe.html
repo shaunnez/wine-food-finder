@@ -1,0 +1,34 @@
+
+<ion-view view-title="Recipe Finder">
+	
+	
+    <ion-header-bar class="bar-light bar-subheader">
+		<label for="search" class="sub-nav-search">
+			<span class="icon-left ion-search"></span>
+	      	<input type="search" name="recipeSearch" id="recipeSearch" placeholder="Search" ng-model="recipeSearch">
+			
+		</label>
+		<span class="ion-close-container" ng-click="clearSearch();">
+			<span class="icon-right ion-close"></span>
+		</span>
+    </ion-header-bar>
+	
+	<ion-content class="has-subheader">
+		<ion-list id="recipeList">
+			<ion-item class="item-thumbnail-left item-text-wrap" ui-sref="tab.recipe-detail({ name: item.name.text })" ng-repeat="item in recipes"> 
+				
+				<img ng-src="{{item.image.src }}" class="custom-list-image" />
+				
+				<h3>{{item.name.text }} </h3>
+				<p>{{ item.type }}</p>
+
+				<p>{{ item.description }}</p>
+				
+			</ion-item>
+		</ion-list>
+	</ion-content>
+	
+	<ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+	
+</ion-view>
+

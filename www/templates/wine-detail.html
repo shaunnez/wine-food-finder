@@ -1,0 +1,52 @@
+
+<ion-view view-title="Product Details">
+	
+	<ion-content class="padding" ng-show="product">
+	
+		<div id="productContainer" class="card ">
+			<div class="item item-avatar item-text-wrap">
+				<img ng-src="{{ product.awardImage}}" />
+				
+				<h2>{{ product.name }}</h2>
+				
+			</div>
+			
+			<div class="item item-image item-divider">
+				<img ng-src="{{ product.bottleImage }}" />
+			</div>
+			
+			
+			<div class="item item-text-wrap">
+				<p><b>Variety:</b> {{ product.variety }}</p>
+			</div>
+			
+			<div class="item item-text-wrap">
+				<p><b>Style:</b> {{ product.style }}</p>
+			</div>
+			
+			
+			<div class="item item-text-wrap">
+				<p><b>Region:</b> {{ product.region }}</p>
+			</div>
+			
+			<div class="item item-text-wrap">
+				<p><b>Year:</b> {{ product.year }}</p>
+			</div>
+			<div class="item item-text-wrap">
+				<p><b>Price Range:</b> {{ product.priceRange }}</p>
+			</div>
+			<div class="item item-text-wrap">
+				<p><b>Foods:</b></p>
+				<p>{{ product.foodMatch.join(', ') }}</p>
+			</div>
+	
+			<div class="item item-text-wrap">
+				<p><b>Description:</b></p>
+				<p><i>{{ product.description }}</i></p>
+			</div>
+			
+		</div>
+		
+	</ion-content>
+</ion-view>
+

@@ -1,0 +1,39 @@
+
+<ion-view view-title="Recipe">
+
+	<ion-content class="padding" ng-show="recipe">
+	
+		<div id="recipe" class="card ">
+			<div class="item item-text-wrap">
+				
+				<h2>{{ recipe.name.text }}</h2>
+				
+			</div>
+			
+			<div class="item item-image item-divider">
+				<img ng-src="{{ recipe.image.src }}" />
+			</div>
+			
+			
+			<div class="item item-text-wrap">
+				<p><b>Type:</b> {{ recipe.type }}</p>
+			</div>
+			
+			<div class="item item-text-wrap" ng-if="recipe['prep-time']">
+				<p><b>Prep time:</b> {{ recipe['prep-time'] }}</p>
+			</div>
+			
+			<div class="item item-text-wrap" ng-if="recipe['cooking-time']">
+				<p><b>Cooking time:</b> {{ recipe['cooking-time'] }}</p>
+			</div>
+			
+			<div class="item item-text-wrap">
+				<p><b>Description:</b></p>
+				<p>{{ recipe.description }}</p>
+			</div>
+			
+		</div>
+		
+	</ion-content>
+</ion-view>
+

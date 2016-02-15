@@ -1,0 +1,40 @@
+
+<ion-view view-title="Wine Finder">
+	
+	<ion-nav-buttons side="secondary">
+	  <button class="button button-dark" ng-click="openFilterModal($event)">
+	    Filter
+	  </button>
+	</ion-nav-buttons>
+	
+    <ion-header-bar class="bar-light bar-subheader">
+		<label for="search" class="sub-nav-search">
+			<span class="icon-left ion-search"></span>
+	      	<input type="search" name="wineSearch" id="wineSearch" placeholder="Search" ng-model="wineSearch">
+			
+		</label>
+		<span class="ion-close-container" ng-click="clearSearch();">
+			<span class="icon-right ion-close"></span>
+		</span>
+    </ion-header-bar>
+	
+	<ion-content class="has-subheader">
+		<ion-refresher pulling-text="Pull to refresh..." on-refresh="loadData()"></ion-refresher>
+		<ion-list id="productList">
+			<ion-item class="item-thumbnail-left item-text-wrap" ui-sref="tab.wine-detail({ name: item.name})" ng-repeat="item in products"> 
+			<!-- | filter: { variety: fullData.selectedVariety, style: fullData.selectedStyle, foodMatch: fullData.selectedFoodMatch, region: fullData.selectedRegion, $: search }" -->
+				
+				<img ng-src="{{item.bottleImage }}" class="custom-list-image" />
+				
+				<h3> {{ item.name }} {{item.year }}</h3>
+				<p>{{ item.style }}</p>
+				<p>{{ item.priceRange }}</p>
+				
+			</ion-item>
+		</ion-list>
+	</ion-content>
+	
+	<ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+	
+</ion-view>
+

@@ -1,0 +1,26 @@
+<ion-view view-title="Chat Rooms">
+    <ion-content>
+		
+        <ion-list ng-show="rooms.length">
+			
+			<ion-item class="item item-divider">
+				<h2>Enter your name</h2>
+			</ion-item>
+			
+			<ion-item class="item item-input">
+				<span class="input-label">Chat name</span>
+				<input type="text" ng-model="userModel.chatName" placeholder="Name" />
+			</ion-item>
+
+			<ion-item class="item item-divider">
+				<h2>Choose a room</h2>
+			</ion-item>
+			
+            <ion-item class="item-icon-left" ng-repeat="room in rooms" type="item-text-wrap" ng-click="openChatRoom(room.$id)">
+                <i class="icon {{room.icon}}"></i>
+                <h2>{{room.name}}</h2>
+            </ion-item>
+        </ion-list>
+        
+    </ion-content>
+</ion-view>

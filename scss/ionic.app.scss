@@ -1,0 +1,128 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.custom-loader {
+	fill: white;
+	stroke: white;
+}
+
+#productList img  {
+	width: auto;
+	left: 40px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.sub-nav-search {
+	padding-left: 30px;
+	padding-right: 30px;
+	display: block;
+	
+	.ion-search {
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		font-size: 20px;
+	}
+	
+	
+	input {
+		width: 100%;
+	}
+}
+
+.ion-close-container {
+	display: block;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+	font-size: 20px;
+	padding: 13px 15px 8px 15px;
+}
+
+#productContainer {
+	.item-image img {
+		max-height: 200px;
+		width: auto;
+		margin: 15px 0;
+	}
+}
+
+#foodContainer {
+	
+	.row {
+		padding: 0px;
+	}
+	.card {
+		margin: 5px;
+	}
+	
+	.item-body {
+		padding: 10px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.has-sub-footer {
+	bottom: 98px;
+}
+
+.bar-sub-footer {
+	bottom: 49px;
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 0px;
+	
+	.item-input-inset {
+		width: 100%;
+		margin: 0px;
+		
+		input[type="text"] {
+			width: 100%;
+		}
+		
+		.button {
+			min-height: 26px;
+			line-height: 26px;
+		}
+	}
+}
+
+.item-note {
+    font-size: 10px;
+    margin-top: -22px;
+    margin-right: -35px;
+}
+
+#chatName {
+	padding: 10px;
+}
+
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button { 
+	text-align: center;
+}
+

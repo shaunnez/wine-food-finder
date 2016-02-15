@@ -1,0 +1,45 @@
+<ion-modal-view>
+	<ion-header-bar>
+		<h1 class="title">Filter list</h1>
+	</ion-header-bar>
+	<ion-content class="padding">
+		
+		<form>
+			<label class="item item-input item-select">
+				<span class="input-label">Variety {{ variety }}</span>
+				<select name="variety" ng-model="fullData.selectedVariety">
+					<option value="">Please select</option>
+					<option value="{{item}}" ng-repeat="item in fullData.varieties">{{item}}</option>
+				</select>
+			</label>
+			
+			<label class="item item-input item-select">
+				<span class="input-label">Style</span>
+				<select name="style" ng-model="fullData.selectedStyle">
+					<option value="">Please select</option>
+					<option value="{{item}}" ng-repeat="item in fullData.styles">{{item}}</option>
+				</select>
+			</label>
+			<label class="item item-input item-select">
+				<span class="input-label">Food Type</span>
+				<select name="foodMatch" ng-model="fullData.selectedFoodMatch">
+					<option value="">Please select</option>
+					<option value="{{item}}" ng-repeat="item in fullData.foodMatches">{{item}}</option>
+				</select>
+			</label>
+			<label class="item item-input item-select">
+				<span class="input-label">Region</span>
+				<select name="region" ng-model="fullData.selectedRegion">
+					<option value="">Please select</option>
+					<option value="{{item}}" ng-repeat="item in fullData.regions">{{item}}</option>
+				</select>
+			</label>
+			
+			<label class="item item-input">
+				<button class="button button-block button-positive" ng-click="closeModal($event)">
+				  Filter
+				</button>
+			</label>
+		</form>
+	</ion-content>
+</ion-modal-view>
